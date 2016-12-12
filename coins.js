@@ -28,31 +28,23 @@ function coinamount() {
 
 function count() {
   if (!isNaN(money)){
-    var t=money
-      while(t>=0.25) {
-      t -=0.25;
+    var t=money*100
+    while(t>=25){
+      t -=25;
       quarters+=1;
     }
-    while(t<0.25 && t>=0.10){
-      t-=0.10;
+    while(t<25 && t>=10){
+      t-=10;
       dimes+=1;
     }
-    // for (t = money; t!==0; t-=0.25) {
-      // if (t>.25){
-      //   t= t-.25;
-        // quarters+=1;
-      // }
-      // else if(t<.25 && t>.10){
-      //   t= t-.10;
-      //   dimes+=1;
-      // }else if(t<.10 && t>.05){
-      //   t= t-.05;
-      //   nickels+=1;
-      // }else{
-      //   t= t-.01;
-      //   pennies+=1
-      // }
-    // }
+    while(t<10 && t>=5){
+      t-=5;
+      nickels+=1;
+    }
+    while(t<5 && t>=1){
+      t-=1;
+      pennies+=1;
+    }
     pt();
   }else{
     alert("Please enter a number using the Numeral( 4, 5, 56, etc...)")
@@ -65,8 +57,8 @@ function count() {
 function pt() {
   console.log("quarters:"+quarters)
   console.log("dimes:"+dimes)
-  // console.log("nickels:"+nickels)
-  // console.log("pennies:"+pennies)
+  console.log("nickels:"+nickels)
+  console.log("pennies:"+pennies)
   quarters=0
   dimes = 0
   nickels = 0
