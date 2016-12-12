@@ -1,0 +1,21 @@
+body {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.pageLayout {
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: center;*/
+  flex-direction: column;
+  align-content: center;
+  /*align-content: flex-start;*/
+
+}
+
+
+
+.centerLayout {
+  align-self: center;
+  flex-wrap: wrap;
+
+}
