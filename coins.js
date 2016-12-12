@@ -1,8 +1,21 @@
-var money = document.getElementById("userAmount")
+
+function coinamount() {
+
+var money = parseInt(document.getElementById("userAmount").vaule)
 
 
-coinamount();
-pennies();
-quarters();
-dimes();
-nickels();
+
+console.log(money)
+}
+document.addEventListener("keyup", function(e)
+{
+  if(e.code=="Enter"){
+    coinamount();
+  }
+})
+
+
+// pennies();
+// quarters();
+// dimes();
+// nickels();
