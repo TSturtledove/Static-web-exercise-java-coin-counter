@@ -18,7 +18,6 @@ function coinamount() {
 
   money = (document.getElementById("userAmount").value)
 
-  // money = parseInt(money)
 
   console.log(money)
   count();
@@ -30,14 +29,14 @@ function coinamount() {
 function count() {
   if (!isNaN(money)){
     var t=money
-    do {
+      while(t>=0.25) {
       t -=0.25;
       quarters+=1;
-    } while(t>=0.25)
-    do {
+    }
+    while(t<0.25 && t>=0.10){
       t-=0.10;
       dimes+=1;
-    } while(t>=0.10)
+    }
     // for (t = money; t!==0; t-=0.25) {
       // if (t>.25){
       //   t= t-.25;
