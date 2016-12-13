@@ -28,7 +28,7 @@ function coinamount() {
 
 function count() {
   if (!isNaN(money)){
-    var t=money*100
+    var t=Math.ceil(money*100);
     while(t>=25){
       t -=25;
       quarters+=1;
