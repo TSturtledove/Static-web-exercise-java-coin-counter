@@ -56,9 +56,13 @@ function count() {
 
 function pt() {
   console.log("quarters:"+quarters)
+  document.getElementsByClassName("quart")[0].innerHTML = quarters
   console.log("dimes:"+dimes)
+  document.getElementsByClassName("dime")[0].innerHTML = dimes
   console.log("nickels:"+nickels)
+  document.getElementsByClassName("nick")[0].innerHTML = nickels
   console.log("pennies:"+pennies)
+  document.getElementsByClassName("penn")[0].innerHTML = pennies
   quarters=0
   dimes = 0
   nickels = 0
